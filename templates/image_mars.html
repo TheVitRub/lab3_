@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Привет, Марс!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Привет, Марс!</h1>
+        <h2>Жди нас, Марс!</h2>
+        <img src="{{ url_for('static', filename='mars.jpg') }}" alt="Марс" width="400" height="300">
+        <p>Красная планета Марс</p>
+    </div>
+</body>
+</html>

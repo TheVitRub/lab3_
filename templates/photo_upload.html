@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка Фотографии</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="photo">Выберите фотографию</label>
+            <input type="file" class="form-control-file" id="photo" name="photo">
+        </div>
+        <button type="submit" class="btn btn-primary">Загрузить</button>
+    </form>
+    {% if filename %}
+        <h3>Фото участника</h3>
+        <img src="{{ url_for('uploaded_file', filename=filename) }}" class="img-thumbnail" style="width: 200px; height: auto;">
+    {% else %}
+        <h3>Здесь будет загруженное фото</h3>
+    {% endif %}
+</body>
+</html>

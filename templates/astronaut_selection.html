@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Астронавт - выбор</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Форма выбора астронавтов</h1>
+            <form action="{{ url_for('astronaut_selection') }}" method="post">
+            <div class="form-group">
+                <label for="last_name">Фамилия:</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" required>
+            </div>
+            <div class="form-group">
+                <label for="first_name">Имя:</label>
+                <input type="text" class="form-control" id="first_name" name="first_name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="education">Образование:</label>
+                <input type="text" class="form-control" id="education" name="education" required>
+            </div>
+            <div class="form-group">
+                <label for="profession">Выбор основной профессии:</label>
+                <select class="form-control" id="profession" name="profession" required>
+                    <option value="инженер-исследователь">Инженер-исследователь</option>
+                    <option value="пилот">Пилот</option>
+                    <option value="строитель">Строитель</option>
+                    <option value="экзобиолог">Экзобиолог</option>
+                    <option value="врач">Врач</option>
+                    <option value="инженер по терраформированию">Инженер по терраформированию</option>
+                    <option value="климатолог">Климатолог</option>
+                    <option value="специалист по радиационной защите">Специалист по радиационной защите</option>
+                    <option value="астрогеолог">Астрогеолог</option>
+                    <option value="гляциолог">Гляциолог</option>
+                    <option value="инженер жизнеобеспечения">Инженер жизнеобеспечения</option>
+                    <option value="метеоролог">Метеоролог</option>
+                    <option value="оператор марсохода">Оператор марсохода</option>
+                    <option value="киберинженер">Киберинженер</option>
+                    <option value="штурман">Штурман</option>
+                    <option value="пилот дронов">Пилот дронов</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="gender">Пол:</label><br>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Мужской</label><br>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Женский</label>
+            </div>
+            <div class="form-group">
+                <label for="motivation">Мотивация:</label>
+                <textarea class="form-control" id="motivation" name="motivation" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="stay_on_mars">Готовы ли остаться на Марсе?</label><br>
+                <input type="radio" id="yes" name="stay_on_mars" value="yes" required>
+                <label for="yes">Да</label><br>
+                <input type="radio" id="no" name="stay_on_mars" value="no" required>
+                <label for="no">Нет</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>
